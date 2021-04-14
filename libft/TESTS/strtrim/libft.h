@@ -6,7 +6,7 @@
 /*   By: lzylberm <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/16 18:05:38 by lzylberm          #+#    #+#             */
-/*   Updated: 2021/04/14 17:19:37 by lzylberm         ###   ########.fr       */
+/*   Updated: 2021/04/14 15:45:49 by lzylberm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,8 +50,4 @@ int		ft_tolower(int c);
 void	*ft_calloc(unsigned int count, unsigned int size);
 char	*ft_substr(char const *s, unsigned int start, unsigned int len);
 char	*ft_strtrim(char const *s1, char const *set);
-void	ft_putchar_fd(char c, int fd);
-void	ft_putstr_fd(char *str, int fd);
-void	ft_putnbr_fd(int n, int fd);
-void	ft_putendl_fd(char *str, int fd);
 #endif

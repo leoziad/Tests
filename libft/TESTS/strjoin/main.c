@@ -1,5 +1,4 @@
-#include <unistd.h>
-#include <stdlib.h>
+#include "libft.h"
 
 void	ft_putchar(char c)
 {
@@ -18,20 +17,16 @@ void	ft_putstr(char *str)
 	}
 }
 
-char	*ft_strjoin(int size, char **strs, char *sep);
-
 int		main(void)
 {
-	char	*strs[4];
-	char	*ptr;
-	
-	strs[0] = "Grave";
-	strs[1] = "envie";
-	strs[2] = "de";
-	strs[3] = "crever !";
-	ptr = ft_strjoin(4, strs, "SEP");
-	ft_putstr(ptr);
-	free (ptr);
+	char	*s1 = "my favorite animal is";
+	char	*s2 = " ";
+	char	*s3 = "the nyancat";
+	char	*tmp  = ft_strjoin(s1, s2);
+	char	*res  = ft_strjoin(tmp, s3);
+	free (tmp);
+	ft_putstr(res);
+	free (res);
 
 	return (0);
 }

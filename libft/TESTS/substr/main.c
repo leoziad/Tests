@@ -3,9 +3,8 @@
 
 int		main(void)
 {
-	char *str = "i just want this part #############";
-	size_t size = 22;
-	char *ret = ft_substr(str, 0, size);
+	char *str = "  1?!Un deux ? 1 deux ! Test micro !!";
+	char *ret = ft_substr(str, 5, 29);
 
 	printf("%s\n", ret);
 	free (ret);

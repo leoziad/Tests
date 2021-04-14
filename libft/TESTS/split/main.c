@@ -7,13 +7,13 @@ int		main(void)
 {
 	char	**ptr;
 
-	ptr = ft_split("dMwTxJUGZkjJAw7rIqN3WFDpz07FzlppvpOQs", "");
+	ptr = ft_split("      split       this for   me  !", " ");
 	printf("%s\n", ptr[0]);
 	printf("%s\n", ptr[1]);
 	printf("%s\n", ptr[2]);
 	printf("%s\n", ptr[3]);
 	printf("%s\n", ptr[4]);
-	//printf("%s\n", ptr[5]);
+	printf("%s\n", ptr[5]);
 	//printf("%s\n", ptr[6]);
 	//printf("%s\n", ptr[7]);
 	//printf("%s\n", ptr[8]);

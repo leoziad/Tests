@@ -1,27 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lzylberm <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/04 14:38:59 by lzylberm          #+#    #+#             */
-/*   Updated: 2021/04/14 17:16:24 by lzylberm         ###   ########.fr       */
+/*   Created: 2021/04/14 17:22:06 by lzylberm          #+#    #+#             */
+/*   Updated: 2021/04/14 17:52:53 by lzylberm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	ft_putstr(char *str)
+char	*ft_pre_itoa(int n, int index)
 {
-	int	index;
+	char	*result;
 
-	if (str == NULL)
-		return;
-	index = 0;
-	while (str[index] != '\0')
-	{
-		ft_putchar(str[index]);
-		index++;
-	}
+	result = 0;
+	if (n < 0)
+		n *= -1;
+	if (n > 9)
+		ft_pre_itoa(n / 10, index + 1);
+	result[index] = (n % 10) + 48;
+	return (result);
 }
+
+

@@ -6,11 +6,11 @@
 /*   By: lzylberm <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/23 09:07:59 by lzylberm          #+#    #+#             */
-/*   Updated: 2021/04/01 15:54:45 by lzylberm         ###   ########.fr       */
+/*   Updated: 2021/04/14 16:57:31 by lzylberm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 static int		ft_is_sep(char *str, char *charset)
 {
@@ -50,7 +50,7 @@ static int		ft_word_count(char *str, char *charset)
 	return (word_count);
 }
 
-static char		*ft_strdup(char *src, int len)
+static char		*ft_worddup(char *src, int len)
 {
 	char	*dest;
 	int		index;
@@ -87,11 +87,11 @@ char			**ft_split(char *str, char *charset)
 		while (str[index_a] != '\0' && ft_is_sep(&str[index_a], charset))
 			index_a++;
 		w_len = ft_word_len(&str[index_a], charset);
-		if ((tab[index_b] = ft_strdup(&str[index_a], w_len)) == NULL)
+		if ((tab[index_b] = ft_worddup(&str[index_a], w_len)) == NULL)
 			return (NULL);
 		index_a = index_a + w_len;
 		index_b++;
 	}
-	tab[t_len] = NULL;
+	tab[t_len] = ((void *)0);
 	return (tab);
 }

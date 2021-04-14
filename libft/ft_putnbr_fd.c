@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lzylberm <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/04 14:38:59 by lzylberm          #+#    #+#             */
-/*   Updated: 2021/04/14 17:16:24 by lzylberm         ###   ########.fr       */
+/*   Created: 2021/04/14 17:12:01 by lzylberm          #+#    #+#             */
+/*   Updated: 2021/04/14 17:14:27 by lzylberm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr(char *str)
+void	ft_putnbr_fd(int n, int fd)
 {
-	int	index;
+	long int	lnb;
 
-	if (str == NULL)
-		return;
-	index = 0;
-	while (str[index] != '\0')
+	lnb = n;
+	if (lnb < 0)
 	{
-		ft_putchar(str[index]);
-		index++;
+		ft_putchar_fd('-', fd);
+		lnb = lnb * -1;
 	}
+	if (lnb > 9)
+		ft_putnbr_fd(lnb / 10, fd);
+	ft_putchar_fd(48 + lnb % 10, fd);
 }
