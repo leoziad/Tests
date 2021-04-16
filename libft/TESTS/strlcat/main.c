@@ -59,15 +59,14 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size);
 
 int		main(void)
 {
-	char	s1[255];
-	char	s2[255];
-	char	s3[255];
-	char	s4[255];
+	char	*s1 = "ca marche";
+	char	*s2 = " pas";
+	char	*s3 = "ca marche";
+	char	*s4 = " pas";
 
 	ft_putnbr(ft_strlcat(s1, s2, 3));
 	ft_putchar('\n');
 	ft_putstr(s1);
-	ft_putchar('\n');
 	ft_putchar('\n');
 	ft_putnbr(strlcat(s3, s4, 3));
 	ft_putchar('\n');

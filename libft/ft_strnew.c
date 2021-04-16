@@ -6,7 +6,7 @@
 /*   By: lzylberm <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/01 15:49:42 by lzylberm          #+#    #+#             */
-/*   Updated: 2021/04/01 15:50:25 by lzylberm         ###   ########.fr       */
+/*   Updated: 2021/04/16 14:37:16 by lzylberm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ char	*ft_strnew(int size)
 	char	*result;
 
 	index = 0;
-	result = malloc(sizeof(char) * size);
+	result = malloc(sizeof(char) * size + 1);
 	if (result == NULL)
 		return (NULL);
-	while (index < size)
+	while (index <= size)
 	{
 		result[index] = '\0';
 		index++;
