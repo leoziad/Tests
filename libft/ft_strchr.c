@@ -6,7 +6,7 @@
 /*   By: lzylberm <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/01 13:45:40 by lzylberm          #+#    #+#             */
-/*   Updated: 2021/04/07 11:02:09 by lzylberm         ###   ########.fr       */
+/*   Updated: 2021/04/22 13:34:05 by lzylberm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,16 @@
 
 char	*ft_strchr(const char *s, int c)
 {
+	char	c_cpy;
+	
+	c_cpy = (char)c;
 	while (*s)
 	{
-		if (*s == c)
+		if (*s == c_cpy)
 			return ((char*)s);
 		s++;
 	}
-	if (*s == c)
+	if (*s == c_cpy)
 		return ((char*)s);
 	return (NULL);
 }

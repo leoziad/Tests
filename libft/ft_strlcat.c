@@ -6,7 +6,7 @@
 /*   By: lzylberm <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/07 17:55:57 by lzylberm          #+#    #+#             */
-/*   Updated: 2021/04/16 12:09:18 by lzylberm         ###   ########.fr       */
+/*   Updated: 2021/04/22 13:40:41 by lzylberm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 	unsigned int	total_lenght;
 	unsigned int	dest_len;
 
+	if (size == 0)
+		return (ft_strlen(src));
 	total_lenght = (ft_strlen(src) + ft_strlen(dest));
 	i_dest = ft_strlen(dest);
 	dest_len = i_dest;

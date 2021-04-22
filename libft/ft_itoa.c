@@ -6,7 +6,7 @@
 /*   By: lzylberm <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/14 17:22:06 by lzylberm          #+#    #+#             */
-/*   Updated: 2021/04/16 11:55:33 by lzylberm         ###   ########.fr       */
+/*   Updated: 2021/04/22 10:23:53 by lzylberm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,14 +59,14 @@ char				*ft_itoa(int n)
 	if (n < 0)
 	{
 		nb = (long long int)n * -1;
-		if ((str = ft_strnew(ft_card(nb) + 2)) == NULL)
+		if ((str = ft_strnew(ft_card(nb) + 1)) == NULL)
 			return (NULL);
 		str[ft_card(nb)] = '-';
 		ft_revstr(ft_convert(nb, 0, str), ft_strlen(str));
 		return (str);
 	}
 	else
-		if ((str = ft_strnew(ft_card(n) + 1)) == NULL)
+		if ((str = ft_strnew(ft_card(n))) == NULL)
 			return (NULL);
 		ft_revstr(ft_convert(n, 0, str), ft_strlen(str));
 		return (str);

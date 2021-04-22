@@ -6,7 +6,7 @@
 /*   By: lzylberm <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/16 12:19:25 by lzylberm          #+#    #+#             */
-/*   Updated: 2021/04/16 13:36:41 by lzylberm         ###   ########.fr       */
+/*   Updated: 2021/04/22 14:31:06 by lzylberm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,10 @@ t_list		*ft_lstnew(void *content)
 
 	tmp = malloc(sizeof(t_list));
 	if (tmp)
+	{
 		tmp->content = content;
+		tmp->next = NULL;
+	}
 	return (tmp);
 }
 		

@@ -6,7 +6,7 @@
 /*   By: lzylberm <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/16 18:05:38 by lzylberm          #+#    #+#             */
-/*   Updated: 2021/04/16 15:50:54 by lzylberm         ###   ########.fr       */
+/*   Updated: 2021/04/22 10:18:17 by lzylberm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,12 +37,12 @@ char	*ft_strnew(int size);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strnstr(const char *str, const char *to_find, unsigned int len);
-int		ft_atoi(char *str);
-char	**ft_split(char *str, char *charset);
+int		ft_atoi(const char *str);
+char	**ft_split(char const *s, char c);
 void	*ft_memset(void *b, int c, unsigned int len);
-void	*ft_memcpy(void *dest, void *src, unsigned int n);
-void	*ft_memccpy(void *dest, void *src, int c, unsigned int n);
-void	*ft_memmove(void *dst, void *src, unsigned int len);
+void	*ft_memcpy(void *dest, const void *src, unsigned int n);
+void	*ft_memccpy(void *dest, const void *src, int c, unsigned int n);
+void	*ft_memmove(void *dst, const void *src, unsigned int len);
 void	*ft_memchr(const void *s, int c, unsigned int n);
 int		ft_memcmp(const void *s1, const void *s2, unsigned int n);
 void	*ft_bzero(void *s, unsigned int n);
@@ -69,5 +69,7 @@ t_list	*ft_lstlast(t_list *lst);
 void	ft_lstadd_back(t_list **lst, t_list *new);
 void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void *));
+void	ft_lstiter(t_list *lst, void (*f)(void *));
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 #endif

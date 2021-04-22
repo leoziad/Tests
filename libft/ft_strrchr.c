@@ -6,39 +6,31 @@
 /*   By: lzylberm <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 11:38:41 by lzylberm          #+#    #+#             */
-/*   Updated: 2021/04/07 11:49:04 by lzylberm         ###   ########.fr       */
+/*   Updated: 2021/04/22 13:36:51 by lzylberm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		ft_conststrlen(const char *str)
-{
-	int	index;
-
-	index = 0;
-	while (str[index] != '\0')
-		index++;
-	return (index);
-}
-
 char	*ft_strrchr(const char *s, int c)
 {
 	int		len;
 	int		count;
+	char	c_cpy;
 	
-	len = ft_conststrlen(s);
+	c_cpy = (char)c;
+	len = ft_strlen((char *)s);
 	count = 0;
 	while (*s)
 		s++;
 	while (count < len)
 	{
-		if (*s == c)
+		if (*s == c_cpy)
 			return ((char*)s);
 		s--;
 		count++;
 	}
-	if (*s == c)
+	if (*s == c_cpy)
 		return ((char*)s);
 	return (NULL);
 }

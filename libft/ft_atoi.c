@@ -6,7 +6,7 @@
 /*   By: lzylberm <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/08 11:49:37 by lzylberm          #+#    #+#             */
-/*   Updated: 2021/04/01 14:07:33 by lzylberm         ###   ########.fr       */
+/*   Updated: 2021/04/22 11:12:41 by lzylberm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,21 +18,36 @@ static int		ft_isspace(char c)
 		return (0);
 }
 
-int				ft_atoi(char *str)
+static int		ft_sign(char *str)
+{
+	int		sign;
+	
+	while (ft_isspace(*str))
+		str++;
+	if (*str == '+')
+		sign = 1;
+	else if (*str == '-')
+		sign = -1;
+	else if (*str >= '0' && *str <= '9')
+		return (1);
+	str++;
+	if (*str == '+' || *str == '-')
+		return (0);
+	else
+		return (sign);
+}
+
+int		ft_atoi(char *str)
 {
 	int		index;
-	int		sign;
 	int		result;
 
 	index = 0;
 	result = 0;
-	sign = 1;
 	while (ft_isspace(str[index]))
 		index++;
-	if (str[index] == '-' || str[index] == '+')
+	while (str[index] == '-' || str[index] == '+')
 	{
-		if (str[index] == '-')
-			sign = sign * -1;
 		index++;
 	}
 	while (str[index] >= '0' && str[index] <= '9')
@@ -40,5 +55,5 @@ int				ft_atoi(char *str)
 		result = result * 10 + str[index] - 48;
 		index++;
 	}
-	return (result * sign);
+	return (result * ft_sign(str));
 }
