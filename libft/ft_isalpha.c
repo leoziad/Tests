@@ -6,14 +6,14 @@
 /*   By: lzylberm <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 12:17:44 by lzylberm          #+#    #+#             */
-/*   Updated: 2021/04/07 12:20:04 by lzylberm         ###   ########.fr       */
+/*   Updated: 2021/04/24 15:33:31 by lzylberm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_isalpha(int c)
+int	ft_isalpha(int c)
 {
 	if ((c < 'a' || c > 'z') && (c < 'A' || c > 'Z'))
-			return (0);
+		return (0);
 	else
 		return (1);
 }

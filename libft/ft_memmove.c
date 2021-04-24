@@ -6,7 +6,7 @@
 /*   By: lzylberm <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 10:37:00 by lzylberm          #+#    #+#             */
-/*   Updated: 2021/04/22 11:40:46 by lzylberm         ###   ########.fr       */
+/*   Updated: 2021/04/24 15:47:38 by lzylberm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,6 @@ void	*ft_memmove(void *dst, const void *src, unsigned int len)
 		}
 	}
 	else
-		ft_memcpy(dst, src, len);	
+		ft_memcpy(dst, src, len);
 	return (ptr);
 }

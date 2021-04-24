@@ -6,14 +6,14 @@
 /*   By: lzylberm <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 12:22:23 by lzylberm          #+#    #+#             */
-/*   Updated: 2021/04/07 12:23:01 by lzylberm         ###   ########.fr       */
+/*   Updated: 2021/04/24 15:34:42 by lzylberm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
 	if (c < '0' || c > '9')
-			return (0);
+		return (0);
 	else
 		return (1);
 }

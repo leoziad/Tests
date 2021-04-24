@@ -6,11 +6,11 @@
 /*   By: lzylberm <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 16:05:15 by lzylberm          #+#    #+#             */
-/*   Updated: 2021/03/09 13:12:35 by lzylberm         ###   ########.fr       */
+/*   Updated: 2021/04/24 16:10:27 by lzylberm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strlen(char *str)
+int	ft_strlen(char *str)
 {
 	int	index;
 

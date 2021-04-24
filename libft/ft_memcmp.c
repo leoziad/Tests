@@ -6,11 +6,11 @@
 /*   By: lzylberm <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 11:29:38 by lzylberm          #+#    #+#             */
-/*   Updated: 2021/04/14 12:56:30 by lzylberm         ###   ########.fr       */
+/*   Updated: 2021/04/24 15:46:34 by lzylberm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_memcmp(const void *s1, const void *s2, unsigned int n)
+int	ft_memcmp(const void *s1, const void *s2, unsigned int n)
 {
 	unsigned int	index;
 

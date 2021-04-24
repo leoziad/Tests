@@ -6,15 +6,15 @@
 /*   By: lzylberm <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/23 09:07:59 by lzylberm          #+#    #+#             */
-/*   Updated: 2021/04/22 11:17:30 by lzylberm         ###   ########.fr       */
+/*   Updated: 2021/04/24 15:58:54 by lzylberm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		ft_word_len(char const *str, char c)
+static int	ft_word_len(char const *str, char c)
 {
-	int index;
+	int	index;
 
 	index = 0;
 	while (str[index] != '\0' && str[index] != c)
@@ -22,7 +22,7 @@ static int		ft_word_len(char const *str, char c)
 	return (index);
 }
 
-static int		ft_word_count(char const *str, char c)
+static int	ft_word_count(char const *str, char c)
 {
 	int		len;
 	int		word_count;
@@ -40,7 +40,7 @@ static int		ft_word_count(char const *str, char c)
 	return (word_count);
 }
 
-static char		*ft_worddup(char const *src, int len)
+static char	*ft_worddup(char const *src, int len)
 {
 	char	*dest;
 	int		index;
@@ -58,32 +58,31 @@ static char		*ft_worddup(char const *src, int len)
 	return (dest);
 }
 
-char			**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	char	**tab;
-	int		t_len;
 	int		index_a;
 	int		index_b;
 	int		w_len;
 
 	if (s == NULL)
 		return (NULL);
-	t_len = ft_word_count(s, c);
-	tab = malloc(sizeof(char *) * (t_len + 1));
+	tab = malloc(sizeof(char *) * (ft_word_count(s, c) + 1));
 	if (tab == NULL)
 		return (NULL);
 	index_a = 0;
 	index_b = 0;
-	while (index_b < t_len)
+	while (index_b < ft_word_count(s, c))
 	{
 		while (s[index_a] != '\0' && s[index_a] == c)
 			index_a++;
 		w_len = ft_word_len(&s[index_a], c);
-		if ((tab[index_b] = ft_worddup(&s[index_a], w_len)) == NULL)
+		tab[index_b] = ft_worddup(&s[index_a], w_len);
+		if (tab[index_b] == NULL)
 			return (NULL);
 		index_a = index_a + w_len;
 		index_b++;
 	}
-	tab[t_len] = ((void *)0);
+	tab[ft_word_count(s, c)] = ((void *)0);
 	return (tab);
 }

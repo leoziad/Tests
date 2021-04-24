@@ -6,7 +6,7 @@
 /*   By: lzylberm <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 10:59:46 by lzylberm          #+#    #+#             */
-/*   Updated: 2021/04/24 13:44:49 by lzylberm         ###   ########.fr       */
+/*   Updated: 2021/04/24 15:46:18 by lzylberm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_memchr(const void *s, int c, unsigned int n)
 {
 	unsigned int	index;
 	unsigned char	c_cpy;
-	
+
 	c_cpy = (unsigned char)c;
 	index = 0;
 	if (n > 0)

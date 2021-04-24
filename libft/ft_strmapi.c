@@ -6,7 +6,7 @@
 /*   By: lzylberm <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/16 09:55:07 by lzylberm          #+#    #+#             */
-/*   Updated: 2021/04/22 11:16:08 by lzylberm         ###   ########.fr       */
+/*   Updated: 2021/04/24 16:11:19 by lzylberm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
 	if (s == NULL)
 		return (NULL);
-	if ((str = ft_strnew(ft_strlen((char *)s))) == NULL)
+	str = ft_strnew(ft_strlen((char *)s));
+	if (str == NULL)
 		return (NULL);
 	index = 0;
 	while (s[index] != '\0')

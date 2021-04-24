@@ -6,7 +6,7 @@
 /*   By: lzylberm <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 14:38:59 by lzylberm          #+#    #+#             */
-/*   Updated: 2021/04/14 17:16:24 by lzylberm         ###   ########.fr       */
+/*   Updated: 2021/04/24 15:48:29 by lzylberm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_putstr(char *str)
 	int	index;
 
 	if (str == NULL)
-		return;
+		return ;
 	index = 0;
 	while (str[index] != '\0')
 	{

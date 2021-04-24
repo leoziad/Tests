@@ -6,11 +6,11 @@
 /*   By: lzylberm <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/08 11:49:37 by lzylberm          #+#    #+#             */
-/*   Updated: 2021/04/22 11:12:41 by lzylberm         ###   ########.fr       */
+/*   Updated: 2021/04/24 15:31:36 by lzylberm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-static int		ft_isspace(char c)
+static int	ft_isspace(char c)
 {
 	if (c == 32 || c == '\n' || c == 9 || c == '\v' || c == '\f' || c == '\r')
 		return (1);
@@ -18,10 +18,10 @@ static int		ft_isspace(char c)
 		return (0);
 }
 
-static int		ft_sign(char *str)
+static int	ft_sign(char *str)
 {
 	int		sign;
-	
+
 	while (ft_isspace(*str))
 		str++;
 	if (*str == '+')
@@ -37,7 +37,7 @@ static int		ft_sign(char *str)
 		return (sign);
 }
 
-int		ft_atoi(char *str)
+int	ft_atoi(char *str)
 {
 	int		index;
 	int		result;

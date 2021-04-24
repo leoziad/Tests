@@ -6,7 +6,7 @@
 /*   By: lzylberm <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 14:23:11 by lzylberm          #+#    #+#             */
-/*   Updated: 2021/04/24 13:26:40 by lzylberm         ###   ########.fr       */
+/*   Updated: 2021/04/24 16:26:11 by lzylberm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,14 @@ char	*ft_substr(char const *s, unsigned int start, unsigned int len)
 	}
 	else if (len > ((unsigned int)ft_strlen((char *)s) - start))
 	{
-		if ((ptr = ft_strnew(((unsigned int)ft_strlen((char *)s) - start))) == NULL)
+		ptr = ft_strnew(((unsigned int)ft_strlen((char *)s) - start));
+		if (ptr == NULL)
 			return (NULL);
 	}
 	else
 	{
-		if ((ptr = ft_strnew(len)) == NULL)
+		ptr = ft_strnew(len);
+		if (ptr == NULL)
 			return (NULL);
 	}
 	substr = ptr;

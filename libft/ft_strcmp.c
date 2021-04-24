@@ -6,11 +6,11 @@
 /*   By: lzylberm <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/07 09:49:00 by lzylberm          #+#    #+#             */
-/*   Updated: 2021/04/20 19:22:39 by lzylberm         ###   ########.fr       */
+/*   Updated: 2021/04/24 16:06:15 by lzylberm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strcmp(char *s1, char *s2)
+int	ft_strcmp(char *s1, char *s2)
 {
 	int		index;
 

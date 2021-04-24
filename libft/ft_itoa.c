@@ -6,13 +6,13 @@
 /*   By: lzylberm <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/14 17:22:06 by lzylberm          #+#    #+#             */
-/*   Updated: 2021/04/24 14:06:05 by lzylberm         ###   ########.fr       */
+/*   Updated: 2021/04/24 15:41:53 by lzylberm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int			ft_card(long long int n)
+static int	ft_card(long long int n)
 {
 	int		result;
 
@@ -25,9 +25,9 @@ static int			ft_card(long long int n)
 	return (result + 1);
 }
 
-static void			ft_revstr(char *str, int size)
+static void	ft_revstr(char *str, int size)
 {
-	int index;
+	int	index;
 	int	rev_index;
 	int	tmp;
 
@@ -43,7 +43,7 @@ static void			ft_revstr(char *str, int size)
 	}
 }
 
-static char			*ft_convert(long long int n, int index, char *str)
+static char	*ft_convert(long long int n, int index, char *str)
 {
 	if (n > 9)
 		ft_convert(n / 10, index + 1, str);
@@ -51,23 +51,27 @@ static char			*ft_convert(long long int n, int index, char *str)
 	return (str);
 }
 
-char				*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
-	char		*str;
+	char			*str;
 	long long int	nb;
 
 	if (n < 0)
 	{
 		nb = (long long int)n * -1;
-		if ((str = ft_strnew(ft_card(nb) + 1)) == NULL)
+		str = ft_strnew(ft_card(nb) + 1);
+		if (str == NULL)
 			return (NULL);
 		str[ft_card(nb)] = '-';
 		ft_revstr(ft_convert(nb, 0, str), ft_strlen(str));
 		return (str);
 	}
 	else
-		if ((str = ft_strnew(ft_card(n))) == NULL)
+	{
+		str = ft_strnew(ft_card(n));
+		if (str == NULL)
 			return (NULL);
 		ft_revstr(ft_convert(n, 0, str), ft_strlen(str));
 		return (str);
+	}
 }

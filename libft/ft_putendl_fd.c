@@ -6,7 +6,7 @@
 /*   By: lzylberm <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/14 17:17:58 by lzylberm          #+#    #+#             */
-/*   Updated: 2021/04/14 17:20:55 by lzylberm         ###   ########.fr       */
+/*   Updated: 2021/04/24 15:48:05 by lzylberm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_putendl_fd(char *str, int fd)
 {
 	if (str == NULL)
-		return;
+		return ;
 	while (*str)
 	{
 		write(fd, &*str, 1);

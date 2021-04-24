@@ -6,13 +6,13 @@
 /*   By: lzylberm <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/14 15:27:02 by lzylberm          #+#    #+#             */
-/*   Updated: 2021/04/22 14:13:36 by lzylberm         ###   ########.fr       */
+/*   Updated: 2021/04/24 16:23:55 by lzylberm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		ft_check_set(char const *str, char const *charset)
+static int	ft_check_set(char const *str, char const *charset)
 {
 	while (*charset)
 	{
@@ -22,7 +22,7 @@ static int		ft_check_set(char const *str, char const *charset)
 	return (0);
 }
 
-char			*ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	char const		*ptr;
 	int				index;

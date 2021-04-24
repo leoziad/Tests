@@ -6,14 +6,14 @@
 /*   By: lzylberm <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 12:33:13 by lzylberm          #+#    #+#             */
-/*   Updated: 2021/04/07 13:42:51 by lzylberm         ###   ########.fr       */
+/*   Updated: 2021/04/24 15:32:18 by lzylberm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_isalnum(int c)
+int	ft_isalnum(int c)
 {
 	if ((c < 'a' || c > 'z') && (c < 'A' || c > 'Z') && (c < '0' || c > '9'))
-			return (0);
+		return (0);
 	else
 		return (1);
 }
