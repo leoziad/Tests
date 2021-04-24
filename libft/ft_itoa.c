@@ -6,7 +6,7 @@
 /*   By: lzylberm <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/14 17:22:06 by lzylberm          #+#    #+#             */
-/*   Updated: 2021/04/22 10:23:53 by lzylberm         ###   ########.fr       */
+/*   Updated: 2021/04/24 14:06:05 by lzylberm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static int			ft_card(long long int n)
 	int		result;
 
 	result = 0;
-	while (n > 10)
+	while (n > 9)
 	{
 		n /= 10;
 		result++;

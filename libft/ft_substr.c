@@ -6,21 +6,11 @@
 /*   By: lzylberm <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 14:23:11 by lzylberm          #+#    #+#             */
-/*   Updated: 2021/04/22 14:10:04 by lzylberm         ###   ########.fr       */
+/*   Updated: 2021/04/24 13:26:40 by lzylberm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static unsigned int		ft_conststrlen(const char *str)
-{
-	unsigned int	index;
-
-	index = 0;
-	while (str[index] != '\0')
-		index++;
-	return (index);
-}
 
 char	*ft_substr(char const *s, unsigned int start, unsigned int len)
 {
@@ -30,22 +20,29 @@ char	*ft_substr(char const *s, unsigned int start, unsigned int len)
 
 	if (s == NULL)
 		return (NULL);
-	index = start;
-	if (start > (unsigned int)ft_conststrlen(s))
+	else if (start > (unsigned int)ft_strlen((char *)s))
 	{
 		ptr = malloc(1);
 		*ptr = '\0';
 		return (ptr);
 	}
-	if ((ptr = malloc(sizeof(*s) * len + 1)) == NULL)
-		return (NULL);
+	else if (len > ((unsigned int)ft_strlen((char *)s) - start))
+	{
+		if ((ptr = ft_strnew(((unsigned int)ft_strlen((char *)s) - start))) == NULL)
+			return (NULL);
+	}
+	else
+	{
+		if ((ptr = ft_strnew(len)) == NULL)
+			return (NULL);
+	}
 	substr = ptr;
-	while (*s && index < (start + len))
+	index = start;
+	while (s[index] && index < (start + len))
 	{
 		*ptr = s[index];
 		ptr++;
 		index++;
 	}
-	*ptr = '\0';
 	return (substr);
 }
